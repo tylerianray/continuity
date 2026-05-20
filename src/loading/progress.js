@@ -1,4 +1,5 @@
-const { LoadTask } = require('../class/LoadTask.js');
+//const { LoadTask } = require('../class/LoadTask.js');
+import { LoadTask } from '../class/LoadTask.js';
 
 const TOTAL_TASKS = LoadTask.getAllTasks().length;
 let progress = $('.progress');

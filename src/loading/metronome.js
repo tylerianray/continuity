@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 const METRONOME_STATES = [
   "arrow-up-right-circle-fill",
   "arrow-right-circle-fill",
@@ -28,7 +26,4 @@ function stop() {
   clearInterval(metronome);
 }
 
-module.exports = {
-  stop,
-  set
-}
+export { stop, set };

@@ -1,5 +1,8 @@
-const { LoadTask } = require('../class/LoadTask.js');
-const config = require('../class/Config.js');
+// const { LoadTask } = require('../class/LoadTask.js');
+// const config = require('../class/Config.js');
+
+import { LoadTask } from '../class/LoadTask.js';
+import * as config from '../class/Config.js';
 
 const TITLE_DELAY = 1000;
 const CONFIG_DELAY = 100;

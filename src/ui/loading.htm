@@ -57,7 +57,6 @@
     </style>
   </head>
   <body>
-    <script src="loading.js"></script>
     <div id="wrapper" class="centerdiv">
       <div>
         <div style="position: fixed; height: 45vh; top: 0;" class="centerdiv">
@@ -73,6 +72,8 @@
       </div>
     </div>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script type="module" src="loading.js"></script>
     <script>
       function calculatePercentage(progress) {
         let now = parseInt(progress.attr('aria-valuenow'));

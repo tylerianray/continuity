@@ -1,4 +1,4 @@
-const EventEmitter = require('node:events');
+import { EventEmitter } from './EventEmitter.js';
 
 const TASKS = [];
 
@@ -21,9 +21,13 @@ class LoadTask extends EventEmitter {
 
   complete() {
     this.#completed = true;
-    this.emit('complete');
-    if(TASKS.length == 0) this.emit('allComplete');
-    else LoadTask.perform();
+    //if(TASKS.length == 0) ;
+    //else LoadTask.perform();
+    if(TASKS.length != 0) {
+      LoadTask.perform();
+    } else {
+      this.emit('allComplete');
+    }
   }
 
   isComplete() {
@@ -47,6 +51,4 @@ class LoadTask extends EventEmitter {
 
 }
 
-module.exports = {
-  LoadTask
-}
+export { LoadTask };
