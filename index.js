@@ -12,7 +12,7 @@ const LOADING_HTM = path.join(__dirname, 'src/ui/loading.htm');
 const MAIN_HTM = path.join(__dirname, 'src/ui/main.htm');
 
 const devValue = argv.getValue('developer-tools');
-let isDeveloper = (devValue?JSON.parse(devValue):false);
+let isDeveloper = (devValue?JSON.parse(devValue):argv.hasArg('developer-tools'));
 if(isDeveloper !== true && isDeveloper !== false) isDeveloper = false;
 
 function createLoadingWindow(display = undefined) {
@@ -54,6 +54,9 @@ function createMainWindow(display = undefined) {
   mainWindow.loadFile(MAIN_HTM);
 
   mainWindow.webContents.on('did-finish-load', () => {
+    if(isDeveloper) {
+      mainWindow.webContents.openDevTools();
+    }
     loadingWindow.on('closed', () => {
       delete loadingWindow;
       setTimeout(() => {
@@ -65,6 +68,10 @@ function createMainWindow(display = undefined) {
     }
   });
 }
+
+ipcMain.on('requestDisplay', (event) => {
+  event.sender.send('displayBounds', display.bounds);
+});
 
 ipcMain.on('finishedLoading', (event) => {
   createMainWindow(display);

@@ -16,10 +16,8 @@ let metronome = setInterval(() => {
   metroState++;
 }, 250);
 
-let i = $('#metronome');
-
 function set(icon) {
-  i.attr('class', `bi bi-${icon}`);
+  $('#metronome').attr('class', `bi bi-${icon}`);
 }
 
 function stop() {

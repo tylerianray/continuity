@@ -1,0 +1,22 @@
+{
+  "language": {
+    "name": "Testing Language",
+    "version": 1
+  },
+  "branding": {
+    "continuity": "Continuum"
+  },
+  "load": {
+    "loading": "trying to get?",
+    "pointer": " ->",
+    "validating": "checking",
+    "configuration": "config",
+    "awaitingDisplayInformation": "Awaiting display information from daddy electron"
+  },
+  "button": {
+    "confirm": "Confirm",
+    "deny": "Deny",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}

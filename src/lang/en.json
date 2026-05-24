@@ -1,0 +1,22 @@
+{
+  "language": {
+    "name": "English",
+    "version": 1
+  },
+  "branding": {
+    "continuity": "Continuity"
+  },
+  "load": {
+    "loading": "Loading",
+    "pointer": ":",
+    "validating": "Validating",
+    "configuration": "Configuration",
+    "awaitingDisplayInformation": "Awaiting display information"
+  },
+  "button": {
+    "confirm": "Confirm",
+    "deny": "Deny",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
+}
